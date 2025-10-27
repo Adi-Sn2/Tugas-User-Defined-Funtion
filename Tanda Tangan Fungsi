@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double radius(double, double, double, double);
+double circumference(double);
+double area(double);
+
+double radius(double x1, double y1, double x2, double y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+double circumference(double r) {
+    const double PI = 3.1416;
+    return 2 * PI * r;
+}
+double area(double r) {
+    const double PI = 3.1416;
+    return PI * pow(r, 2);
+}
+
+int main() {
+    double r = radius(0, 0, 3, 4);
+    cout << "Jari-jari: " << r << endl;
+    cout << "Keliling: " << circumference(r) << endl;
+    cout << "Luas: " << area(r) << endl;
+
+    cout << "\nTanda tangan fungsi:" << endl;
+    cout << "1. double radius(double, double, double, double)" << endl;
+    cout << "2. double circumference(double)" << endl;
+    cout << "3. double area(double)" << endl;
+
+    return 0;
+}
