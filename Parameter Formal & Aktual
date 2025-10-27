@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double radius(double x1, double y1, double x2, double y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+int main() {
+    double x1 = 0, y1 = 0, x2 = 3, y2 = 4;
+
+    cout << "=== DEMONSTRASI PARAMETER ===" << endl;
+    cout << "Parameter aktual yang dikirim ke fungsi radius(): " << endl;
+    cout << "x1 = " << x1 << ", y1 = " << y1 
+         << ", x2 = " << x2 << ", y2 = " << y2 << endl;
+
+    double r = radius(x1, y1, x2, y2);
+
+    cout << "\nHasil nilai jari-jari lingkaran (dari fungsi radius): " << r << endl;
+    cout << "\nParameter formal pada fungsi radius adalah: (x1, y1, x2, y2)" << endl;
+
+    return 0;
+}
