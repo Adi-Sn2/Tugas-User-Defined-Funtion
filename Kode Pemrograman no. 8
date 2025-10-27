@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+double radius(double x1, double y1, double x2, double y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+double circumference(double r) {
+    return 2 * M_PI * r;
+}
+
+double area(double r) {
+    return M_PI * pow(r, 2);
+}
+
+int main() {
+    double x1 = 0, y1 = 0, x2 = 3, y2 = 4; 
+
+    cout << "Titik pusat lingkaran (x1, y1): " << x1 << ", " << y1 << endl;
+    cout << "Titik pada lingkaran (x2, y2): " << x2 << ", " << y2 << endl;
+
+    double r = radius(x1, y1, x2, y2);
+    double d = 2 * r;
+    double c = circumference(r);
+    double a = area(r);
+
+    cout << "\n=== HASIL PERHITUNGAN ===" << endl;
+    cout << "Jari-jari (radius): " << r << endl;
+    cout << "Diameter: " << d << endl;
+    cout << "Keliling (circumference): " << c << endl;
+    cout << "Luas (area): " << a << endl;
+
+    return 0;
+}
